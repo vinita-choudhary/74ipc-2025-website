@@ -24,12 +24,14 @@ const Header = () => {
       href: "/about-ipca",
       submenu: [
         { name: "About IPCA", href: "/about-ipca" },
+        { name: "About APTI", href: "/about-apti" },
         { name: "President's Message", href: "/president-message" },
         { name: "About Theme", href: "/about-theme" },
         { name: "Key Focus Areas", href: "/key-focus-areas" },
         { name: "Expected Outcomes", href: "/expected-outcomes" },
       ],
     },
+
     { name: "Speakers", href: "/speakers" },
     { name: "Schedule", href: "/schedule" },
     { name: "Scientific", href: "/scientific" },

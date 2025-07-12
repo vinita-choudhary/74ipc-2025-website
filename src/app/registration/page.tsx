@@ -7,108 +7,155 @@ import {
   CheckCircle,
   FileText,
   AlertCircle,
+  ExternalLink,
+  Coffee,
+  UtensilsCrossed,
+  Home,
+  X,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Registration",
+  title: "Registration - 74th Indian Pharmaceutical Congress 2025",
   description:
-    "Register for the 74th Indian Pharmaceutical Congress 2025. Choose from various registration categories with early bird discounts available.",
+    "Register for the 74th Indian Pharmaceutical Congress 2025. Special discounted rates for APTI members and federating association members.",
 };
 
 const registrationCategories = [
   {
-    category: "IPCA Members",
-    earlyBird: "₹8,000",
-    regular: "₹10,000",
-    spot: "₹12,000",
-    benefits: [
-      "Conference Kit",
-      "All Sessions Access",
-      "Lunch & Tea",
-      "Certificate",
-      "Networking Events",
-    ],
-  },
-  {
-    category: "Non-Members (Industry)",
-    earlyBird: "₹12,000",
-    regular: "₹15,000",
-    spot: "₹18,000",
-    benefits: [
-      "Conference Kit",
-      "All Sessions Access",
-      "Lunch & Tea",
-      "Certificate",
-      "Networking Events",
-    ],
-  },
-  {
-    category: "Non-Members (Academia)",
-    earlyBird: "₹6,000",
-    regular: "₹8,000",
-    spot: "₹10,000",
-    benefits: [
-      "Conference Kit",
-      "All Sessions Access",
-      "Lunch & Tea",
-      "Certificate",
-      "Networking Events",
-    ],
-  },
-  {
+    id: 1,
     category: "Students",
-    earlyBird: "₹2,000",
-    regular: "₹3,000",
-    spot: "₹4,000",
-    benefits: [
-      "Conference Kit",
-      "All Sessions Access",
-      "Lunch & Tea",
-      "Certificate",
-    ],
+    superSaver: "₹4,720",
+    superSaverBase: "₹4,000",
+    regular: "₹5,310",
+    regularBase: "₹4,500",
+    lateFee: "₹5,900",
+    lateFeeBase: "₹5,000",
+    spot: "N.A.",
+    spotBase: "N.A.",
+    usd: false,
+    description: "Valid student ID required",
   },
   {
+    id: 2,
+    category: "Teachers & Members",
+    subcategory: "(APTI/IPA/IPGA/IHPA/AIDCOC)",
+    superSaver: "₹6,490",
+    superSaverBase: "₹5,500",
+    regular: "₹7,670",
+    regularBase: "₹6,500",
+    lateFee: "₹8,850",
+    lateFeeBase: "₹7,500",
+    spot: "₹10,030",
+    spotBase: "₹8,500",
+    usd: false,
+    description: "Membership verification required",
+  },
+  {
+    id: 3,
+    category: "Non Member",
+    superSaver: "₹8,260",
+    superSaverBase: "₹7,000",
+    regular: "₹9,440",
+    regularBase: "₹8,000",
+    lateFee: "₹10,620",
+    lateFeeBase: "₹9,000",
+    spot: "₹11,800",
+    spotBase: "₹10,000",
+    usd: false,
+    description: "Industry professionals and academics",
+  },
+  {
+    id: 4,
     category: "Accompanying Person",
-    earlyBird: "₹4,000",
-    regular: "₹5,000",
-    spot: "₹6,000",
-    benefits: [
-      "Welcome Kit",
-      "Cultural Events",
-      "Lunch & Tea",
-      "Networking Events",
-    ],
+    superSaver: "₹4,720",
+    superSaverBase: "₹4,000",
+    regular: "₹5,310",
+    regularBase: "₹4,500",
+    lateFee: "₹5,900",
+    lateFeeBase: "₹5,000",
+    spot: "₹6,490",
+    spotBase: "₹5,500",
+    usd: false,
+    description: "Family members and guests",
+  },
+  {
+    id: 5,
+    category: "Foreign Delegates",
+    superSaver: "$150.00",
+    superSaverBase: "$150.00",
+    regular: "$200.00",
+    regularBase: "$200.00",
+    lateFee: "$250.00",
+    lateFeeBase: "$250.00",
+    spot: "$300.00",
+    spotBase: "$300.00",
+    usd: true,
+    description: "International participants",
   },
 ];
 
-const importantDates = [
+const registrationPeriods = [
   {
-    date: "September 15, 2025",
-    event: "Early Bird Registration Deadline",
-    status: "upcoming",
+    name: "Super Saver",
+    period: "May 15 - July 14, 2025",
+    icon: "⭐",
+    color: "green",
   },
   {
-    date: "November 15, 2025",
-    event: "Regular Registration Deadline",
-    status: "upcoming",
+    name: "Regular Registration",
+    period: "July 15 - Sep 30, 2025",
+    icon: "📅",
+    color: "blue",
   },
   {
-    date: "December 19, 2025",
-    event: "Spot Registration Opens",
-    status: "upcoming",
+    name: "Registration with Late Fee",
+    period: "Oct 1 - Nov 14, 2025",
+    icon: "⏰",
+    color: "orange",
   },
-  { date: "December 19, 2025", event: "Conference Begins", status: "upcoming" },
+  {
+    name: "Spot Registration",
+    period: "Dec 19, 2025",
+    icon: "🎯",
+    color: "red",
+  },
+];
+
+const inclusions = [
+  {
+    icon: <CheckCircle className="h-5 w-5 text-green-600" />,
+    text: "Attend the conference proceedings from 19th to 21st December 2025",
+  },
+  {
+    icon: <Coffee className="h-5 w-5 text-green-600" />,
+    text: "Breakfast, lunch, tea and snacks at the conference venue",
+  },
+  {
+    icon: <UtensilsCrossed className="h-5 w-5 text-green-600" />,
+    text: "Entertainment event and banquet dinner on 19th December 2025",
+  },
+];
+
+const exclusions = [
+  {
+    icon: <Home className="h-5 w-5 text-red-600" />,
+    text: "Accommodation",
+  },
+  {
+    icon: <X className="h-5 w-5 text-red-600" />,
+    text: "Dinner except banquet dinner on 19th December 2025",
+  },
 ];
 
 export default function RegistrationPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pharmaceutical-50 to-primary-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-pharmaceutical-600 to-primary-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Registration
+              Registration Open
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-pharmaceutical-100">
               Join the 74th Indian Pharmaceutical Congress 2025
@@ -124,125 +171,228 @@ export default function RegistrationPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5" />
-                <span>2000+ Participants Expected</span>
+                <span>12,000+ Participants Expected</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Registration Categories */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      {/* APTI Membership Notice */}
+      <section className="py-16 bg-blue-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-blue-500">
+            <div className="flex items-start space-x-4">
+              <div className="bg-blue-100 rounded-full p-3">
+                <Users className="h-6 w-6 text-blue-600" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-gray-800 mb-4">
+                  Special Discounted Registration for APTI Members
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Please note that a discounted registration fee is offered for
+                  members of APTI and delegates from Individual & Institutional
+                  membership of APTI. If you are not a member of APTI you are
+                  encouraged to become a member by clicking on the link
+                  provided.
+                </p>
+                <a
+                  href="#"
+                  className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Register | APTI (click here)
+                  <ExternalLink className="ml-2 h-5 w-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Registration Includes */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
-              Registration Categories & Fees
+              What Your Registration Includes
             </h2>
-            <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
-              Choose the registration category that best fits your profile. All
-              fees include access to technical sessions, exhibition,
-              refreshments, and conference materials.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {registrationCategories.map((category, index) => (
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-xl font-bold text-green-700 mb-6 flex items-center">
+                <CheckCircle className="h-6 w-6 mr-2" />
+                The registration fee enables you to:
+              </h3>
+              <div className="space-y-4">
+                {inclusions.map((item, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    {item.icon}
+                    <p className="text-gray-700">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-xl font-bold text-red-700 mb-6 flex items-center">
+                <X className="h-6 w-6 mr-2" />
+                The registration fee does not cover:
+              </h3>
+              <div className="space-y-4">
+                {exclusions.map((item, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    {item.icon}
+                    <p className="text-gray-700">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Registration Periods */}
+      <section className="py-16 bg-gray-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
+              Registration Periods
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {registrationPeriods.map((period, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg p-8 border border-pharmaceutical-100 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-lg shadow-lg p-6 text-center"
               >
-                <h3 className="text-xl font-bold text-secondary-900 mb-6">
-                  {category.category}
+                <div className="text-3xl mb-4">{period.icon}</div>
+                <h3 className="text-lg font-bold text-gray-800 mb-2">
+                  {period.name}
                 </h3>
-
-                <div className="space-y-4 mb-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-secondary-600">
-                      Early Bird
-                    </span>
-                    <span className="text-lg font-bold text-pharmaceutical-600">
-                      {category.earlyBird}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-secondary-600">Regular</span>
-                    <span className="text-lg font-bold text-primary-600">
-                      {category.regular}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-secondary-600">
-                      Spot Registration
-                    </span>
-                    <span className="text-lg font-bold text-secondary-600">
-                      {category.spot}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="border-t pt-6">
-                  <h4 className="font-semibold text-secondary-900 mb-3">
-                    Includes:
-                  </h4>
-                  <ul className="space-y-2">
-                    {category.benefits.map((benefit, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-center gap-2 text-sm text-secondary-600"
-                      >
-                        <CheckCircle className="h-4 w-4 text-primary-600 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <button className="w-full mt-6 bg-pharmaceutical-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-pharmaceutical-700 transition-colors">
-                  Register Now
-                </button>
+                <p className="text-sm text-gray-600">{period.period}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Important Dates */}
-      <section className="py-20 bg-white">
+      {/* Registration Fee Table */}
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
-              Important Dates
+              Registration Fee (Excluding GST)
             </h2>
             <p className="text-lg text-secondary-600">
-              Mark your calendar with these important registration deadlines
+              Please pay the appropriate registration fee based on the
+              categories provided below.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {importantDates.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-6 p-6 bg-pharmaceutical-50 rounded-lg border border-pharmaceutical-100"
-                >
-                  <div className="flex-shrink-0">
-                    <Calendar className="h-8 w-8 text-pharmaceutical-600" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-secondary-900">
-                      {item.event}
-                    </h3>
-                    <p className="text-pharmaceutical-600 font-medium">
-                      {item.date}
-                    </p>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-100 text-primary-800">
-                      {item.status}
-                    </span>
-                  </div>
-                </div>
-              ))}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-pharmaceutical-600 text-white">
+                  <tr>
+                    <th className="px-4 py-4 text-left text-sm font-semibold">
+                      S.N.
+                    </th>
+                    <th className="px-4 py-4 text-left text-sm font-semibold">
+                      CATEGORY
+                    </th>
+                    <th className="px-4 py-4 text-center text-sm font-semibold">
+                      SUPER SAVER
+                      <br />
+                      <span className="text-xs">
+                        15th MAY 2025 to 14th JULY 2025
+                      </span>
+                    </th>
+                    <th className="px-4 py-4 text-center text-sm font-semibold">
+                      REGULAR
+                      <br />
+                      <span className="text-xs">
+                        15th JULY 2025 TO 30th SEP 2025
+                      </span>
+                    </th>
+                    <th className="px-4 py-4 text-center text-sm font-semibold">
+                      LATE FEE
+                      <br />
+                      <span className="text-xs">
+                        1st Oct 2025 TO 14th NOV 2025
+                      </span>
+                    </th>
+                    <th className="px-4 py-4 text-center text-sm font-semibold">
+                      SPOT
+                      <br />
+                      <span className="text-xs">19th DEC 2025</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  {registrationCategories.map((category, index) => (
+                    <tr
+                      key={category.id}
+                      className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
+                    >
+                      <td className="px-4 py-4 text-sm font-medium text-gray-900">
+                        {category.id}
+                      </td>
+                      <td className="px-4 py-4">
+                        <div>
+                          <div className="text-sm font-medium text-gray-900">
+                            {category.category}
+                          </div>
+                          {category.subcategory && (
+                            <div className="text-xs text-gray-500">
+                              {category.subcategory}
+                            </div>
+                          )}
+                          <div className="text-xs text-gray-500 mt-1">
+                            {category.description}
+                          </div>
+                        </div>
+                      </td>
+                      <td className="px-4 py-4 text-center">
+                        <div className="text-sm font-bold text-green-700">
+                          {category.superSaver}
+                        </div>
+                        <div className="text-xs text-gray-500">
+                          ({category.superSaverBase} + 18% GST)
+                        </div>
+                      </td>
+                      <td className="px-4 py-4 text-center">
+                        <div className="text-sm font-bold text-blue-700">
+                          {category.regular}
+                        </div>
+                        <div className="text-xs text-gray-500">
+                          ({category.regularBase} + 18% GST)
+                        </div>
+                      </td>
+                      <td className="px-4 py-4 text-center">
+                        <div className="text-sm font-bold text-orange-700">
+                          {category.lateFee}
+                        </div>
+                        <div className="text-xs text-gray-500">
+                          ({category.lateFeeBase} + 18% GST)
+                        </div>
+                      </td>
+                      <td className="px-4 py-4 text-center">
+                        <div className="text-sm font-bold text-red-700">
+                          {category.spot}
+                        </div>
+                        {category.spot !== "N.A." && (
+                          <div className="text-xs text-gray-500">
+                            ({category.spotBase} + 18% GST)
+                          </div>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -381,24 +531,28 @@ export default function RegistrationPage() {
         </div>
       </section>
 
-      {/* Contact for Registration */}
-      <section className="py-20 bg-secondary-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Contact Information */}
+      <section className="py-16 bg-pharmaceutical-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Need Help with Registration?
+            Registration Support
           </h2>
-          <p className="text-xl text-secondary-300 mb-8">
-            Our registration support team is here to assist you
+          <p className="text-xl mb-8 text-pharmaceutical-100">
+            For any doubts related to registration, please send an email to:
           </p>
-          <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-            <div>
-              <h3 className="font-semibold mb-2">Email Support</h3>
-              <p className="text-secondary-300">registration@74ipc2025.org</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Phone Support</h3>
-              <p className="text-secondary-300">+91-80-1234-5678</p>
-            </div>
+          <div className="bg-white/10 rounded-lg p-6">
+            <a
+              href="mailto:registration@74ipc.com"
+              className="text-2xl font-bold text-white hover:text-pharmaceutical-200 transition-colors"
+            >
+              registration@74ipc.com
+            </a>
+          </div>
+
+          <div className="mt-12">
+            <button className="bg-white text-pharmaceutical-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-pharmaceutical-50 transition-colors">
+              Register Now
+            </button>
           </div>
         </div>
       </section>
