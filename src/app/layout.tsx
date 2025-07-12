@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,16 +20,21 @@ export const metadata: Metadata = {
     template: "%s | 74th IPC 2025",
   },
   description:
-    "Join the 74th Indian Pharmaceutical Congress 2025 - The premier pharmaceutical conference bringing together industry leaders, researchers, and innovators to shape the future of healthcare.",
+    "Join the 74th Indian Pharmaceutical Congress 2025 featuring 'AI & Technology in Pharma: Educate, Innovate, Empower' - December 19-21, 2025 at Bangalore International Exhibition Centre.",
   keywords: [
     "74th IPC",
     "Indian Pharmaceutical Congress",
+    "AI in Pharma",
+    "Technology in Pharmaceuticals",
     "pharmaceutical conference",
-    "healthcare",
+    "healthcare innovation",
     "drug discovery",
     "pharmaceutical research",
-    "2025",
-    "India",
+    "artificial intelligence",
+    "digital health",
+    "Bangalore",
+    "December 2025",
+    "IPCA",
   ],
   authors: [{ name: "74th IPC Organizing Committee" }],
   creator: "74th Indian Pharmaceutical Congress",
@@ -45,16 +52,18 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://74ipc2025.org",
-    title: "74th Indian Pharmaceutical Congress 2025",
+    title:
+      "74th Indian Pharmaceutical Congress 2025 - AI & Technology in Pharma",
     description:
-      "Join the premier pharmaceutical conference bringing together industry leaders, researchers, and innovators.",
+      "Join the premier pharmaceutical conference featuring AI & Technology in Pharma: Educate, Innovate, Empower. December 19-21, 2025, Bangalore.",
     siteName: "74th IPC 2025",
   },
   twitter: {
     card: "summary_large_image",
-    title: "74th Indian Pharmaceutical Congress 2025",
+    title:
+      "74th Indian Pharmaceutical Congress 2025 - AI & Technology in Pharma",
     description:
-      "Join the premier pharmaceutical conference bringing together industry leaders, researchers, and innovators.",
+      "Join the premier pharmaceutical conference featuring AI & Technology in Pharma: Educate, Innovate, Empower. December 19-21, 2025, Bangalore.",
     creator: "@74IPC2025",
   },
   robots: {
@@ -78,7 +87,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
