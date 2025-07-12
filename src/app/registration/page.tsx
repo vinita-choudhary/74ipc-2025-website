@@ -279,7 +279,7 @@ export default function RegistrationPage() {
         </div>
       </section>
 
-      {/* Registration Fee Table */}
+      {/* Registration Fee Table (replaced with cards) */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -292,108 +292,82 @@ export default function RegistrationPage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-pharmaceutical-600 text-white">
-                  <tr>
-                    <th className="px-4 py-4 text-left text-sm font-semibold">
-                      S.N.
-                    </th>
-                    <th className="px-4 py-4 text-left text-sm font-semibold">
-                      CATEGORY
-                    </th>
-                    <th className="px-4 py-4 text-center text-sm font-semibold">
-                      SUPER SAVER
-                      <br />
-                      <span className="text-xs">
-                        15th MAY 2025 to 14th JULY 2025
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {registrationCategories.map((category, index) => (
+              <div
+                key={category.id}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 flex flex-col justify-between border-t-4 border-pharmaceutical-600"
+              >
+                <div>
+                  <div className="flex items-center mb-2">
+                    <Users className="w-6 h-6 text-pharmaceutical-600 mr-2" />
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {category.category}
+                    </h3>
+                  </div>
+                  {category.subcategory && (
+                    <div className="text-xs text-gray-500 mb-1">
+                      {category.subcategory}
+                    </div>
+                  )}
+                  <div className="text-sm text-gray-600 mb-4">
+                    {category.description}
+                  </div>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center justify-between">
+                      <span className="font-semibold text-green-700">
+                        Super Saver
                       </span>
-                    </th>
-                    <th className="px-4 py-4 text-center text-sm font-semibold">
-                      REGULAR
-                      <br />
-                      <span className="text-xs">
-                        15th JULY 2025 TO 30th SEP 2025
+                      <span className="font-bold text-green-700">
+                        {category.superSaver}
                       </span>
-                    </th>
-                    <th className="px-4 py-4 text-center text-sm font-semibold">
-                      LATE FEE
-                      <br />
-                      <span className="text-xs">
-                        1st Oct 2025 TO 14th NOV 2025
+                    </div>
+                    <div className="text-xs text-gray-500 mb-1 ml-2">
+                      ({category.superSaverBase} + 18% GST)
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-semibold text-blue-700">
+                        Regular
                       </span>
-                    </th>
-                    <th className="px-4 py-4 text-center text-sm font-semibold">
-                      SPOT
-                      <br />
-                      <span className="text-xs">19th DEC 2025</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {registrationCategories.map((category, index) => (
-                    <tr
-                      key={category.id}
-                      className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
-                    >
-                      <td className="px-4 py-4 text-sm font-medium text-gray-900">
-                        {category.id}
-                      </td>
-                      <td className="px-4 py-4">
-                        <div>
-                          <div className="text-sm font-medium text-gray-900">
-                            {category.category}
-                          </div>
-                          {category.subcategory && (
-                            <div className="text-xs text-gray-500">
-                              {category.subcategory}
-                            </div>
-                          )}
-                          <div className="text-xs text-gray-500 mt-1">
-                            {category.description}
-                          </div>
-                        </div>
-                      </td>
-                      <td className="px-4 py-4 text-center">
-                        <div className="text-sm font-bold text-green-700">
-                          {category.superSaver}
-                        </div>
-                        <div className="text-xs text-gray-500">
-                          ({category.superSaverBase} + 18% GST)
-                        </div>
-                      </td>
-                      <td className="px-4 py-4 text-center">
-                        <div className="text-sm font-bold text-blue-700">
-                          {category.regular}
-                        </div>
-                        <div className="text-xs text-gray-500">
-                          ({category.regularBase} + 18% GST)
-                        </div>
-                      </td>
-                      <td className="px-4 py-4 text-center">
-                        <div className="text-sm font-bold text-orange-700">
-                          {category.lateFee}
-                        </div>
-                        <div className="text-xs text-gray-500">
-                          ({category.lateFeeBase} + 18% GST)
-                        </div>
-                      </td>
-                      <td className="px-4 py-4 text-center">
-                        <div className="text-sm font-bold text-red-700">
-                          {category.spot}
-                        </div>
-                        {category.spot !== "N.A." && (
-                          <div className="text-xs text-gray-500">
-                            ({category.spotBase} + 18% GST)
-                          </div>
-                        )}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+                      <span className="font-bold text-blue-700">
+                        {category.regular}
+                      </span>
+                    </div>
+                    <div className="text-xs text-gray-500 mb-1 ml-2">
+                      ({category.regularBase} + 18% GST)
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-semibold text-orange-700">
+                        Late Fee
+                      </span>
+                      <span className="font-bold text-orange-700">
+                        {category.lateFee}
+                      </span>
+                    </div>
+                    <div className="text-xs text-gray-500 mb-1 ml-2">
+                      ({category.lateFeeBase} + 18% GST)
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="font-semibold text-red-700">Spot</span>
+                      <span className="font-bold text-red-700">
+                        {category.spot}
+                      </span>
+                    </div>
+                    {category.spot !== "N.A." && (
+                      <div className="text-xs text-gray-500 mb-1 ml-2">
+                        ({category.spotBase} + 18% GST)
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <button
+                  className="mt-4 w-full bg-pharmaceutical-600 hover:bg-pharmaceutical-700 text-white font-bold py-3 rounded-full transition-colors text-lg"
+                  disabled
+                >
+                  Register
+                </button>
+              </div>
+            ))}
           </div>
         </div>
       </section>
