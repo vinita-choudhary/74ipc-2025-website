@@ -1,44 +1,49 @@
-import { Lightbulb, Users, Award, Wifi, Coffee, Car } from 'lucide-react'
+import { Lightbulb, Users, Award, Wifi, Coffee, Car } from "lucide-react";
 
 const KeyFeatures = () => {
   const features = [
     {
       icon: Lightbulb,
-      title: 'Innovation Hub',
-      description: 'Discover groundbreaking pharmaceutical innovations and emerging technologies',
-      color: 'from-yellow-400 to-orange-500'
+      title: "Innovation Hub",
+      description:
+        "Discover groundbreaking pharmaceutical innovations and emerging technologies",
+      color: "from-pharmaceutical-400 to-pharmaceutical-600",
     },
     {
       icon: Users,
-      title: 'Expert Networking',
-      description: 'Connect with industry leaders, researchers, and fellow professionals',
-      color: 'from-blue-400 to-pharmaceutical-500'
+      title: "Expert Networking",
+      description:
+        "Connect with industry leaders, researchers, and fellow professionals",
+      color: "from-primary-400 to-primary-600",
     },
     {
       icon: Award,
-      title: 'Excellence Recognition',
-      description: 'Celebrate outstanding achievements in pharmaceutical sciences',
-      color: 'from-purple-400 to-pink-500'
+      title: "Excellence Recognition",
+      description:
+        "Celebrate outstanding achievements in pharmaceutical sciences",
+      color: "from-secondary-400 to-secondary-600",
     },
     {
       icon: Wifi,
-      title: 'Digital Experience',
-      description: 'High-speed connectivity and digital tools for enhanced learning',
-      color: 'from-green-400 to-blue-500'
+      title: "Digital Experience",
+      description:
+        "High-speed connectivity and digital tools for enhanced learning",
+      color: "from-primary-400 to-pharmaceutical-500",
     },
     {
       icon: Coffee,
-      title: 'Premium Hospitality',
-      description: 'World-class catering and comfortable networking spaces',
-      color: 'from-amber-400 to-orange-500'
+      title: "Premium Hospitality",
+      description: "World-class catering and comfortable networking spaces",
+      color: "from-pharmaceutical-400 to-secondary-500",
     },
     {
       icon: Car,
-      title: 'Easy Access',
-      description: 'Convenient location with excellent transportation connectivity',
-      color: 'from-gray-400 to-gray-600'
-    }
-  ]
+      title: "Easy Access",
+      description:
+        "Convenient location with excellent transportation connectivity",
+      color: "from-secondary-400 to-primary-600",
+    },
+  ];
 
   return (
     <section className="py-20 bg-white">
@@ -47,10 +52,13 @@ const KeyFeatures = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Why Attend
-            <span className="block text-pharmaceutical-600">74th IPC 2025?</span>
+            <span className="block text-pharmaceutical-600">
+              74th IPC 2025?
+            </span>
           </h2>
           <p className="text-xl text-gray-600">
-            Experience unparalleled opportunities for learning, networking, and professional growth at India's premier pharmaceutical congress.
+            Experience unparalleled opportunities for learning, networking, and
+            professional growth at India's premier pharmaceutical congress.
           </p>
         </div>
 
@@ -61,11 +69,17 @@ const KeyFeatures = () => {
               key={index}
               className="group bg-gray-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition-all duration-300 hover-lift"
             >
-              <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div
+                className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+              >
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>
@@ -77,16 +91,33 @@ const KeyFeatures = () => {
               Join the Largest Pharmaceutical Gathering in India
             </h3>
             <p className="text-xl text-white/90">
-              Be part of a legacy that has shaped pharmaceutical science for over 70 years
+              Be part of a legacy that has shaped pharmaceutical science for
+              over 70 years
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: '5000+', label: 'Attendees', sublabel: 'From 50+ Countries' },
-              { number: '200+', label: 'Speakers', sublabel: 'Industry Experts' },
-              { number: '100+', label: 'Sessions', sublabel: 'Scientific Programs' },
-              { number: '50+', label: 'Exhibitors', sublabel: 'Leading Companies' }
+              {
+                number: "5000+",
+                label: "Attendees",
+                sublabel: "From 50+ Countries",
+              },
+              {
+                number: "200+",
+                label: "Speakers",
+                sublabel: "Industry Experts",
+              },
+              {
+                number: "100+",
+                label: "Sessions",
+                sublabel: "Scientific Programs",
+              },
+              {
+                number: "50+",
+                label: "Exhibitors",
+                sublabel: "Leading Companies",
+              },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-yellow-300 mb-2">
@@ -104,31 +135,55 @@ const KeyFeatures = () => {
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Conference Tracks & Focus Areas
           </h3>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: 'Drug Discovery & Development',
-                topics: ['Novel Drug Targets', 'AI in Drug Discovery', 'Personalized Medicine']
+                title: "Drug Discovery & Development",
+                topics: [
+                  "Novel Drug Targets",
+                  "AI in Drug Discovery",
+                  "Personalized Medicine",
+                ],
               },
               {
-                title: 'Regulatory Affairs',
-                topics: ['Regulatory Guidelines', 'Quality Assurance', 'Clinical Trials']
+                title: "Regulatory Affairs",
+                topics: [
+                  "Regulatory Guidelines",
+                  "Quality Assurance",
+                  "Clinical Trials",
+                ],
               },
               {
-                title: 'Manufacturing & Technology',
-                topics: ['Process Innovation', 'Digital Manufacturing', 'Sustainability']
+                title: "Manufacturing & Technology",
+                topics: [
+                  "Process Innovation",
+                  "Digital Manufacturing",
+                  "Sustainability",
+                ],
               },
               {
-                title: 'Market Access & Policy',
-                topics: ['Healthcare Policy', 'Market Dynamics', 'Global Trade']
-              }
+                title: "Market Access & Policy",
+                topics: [
+                  "Healthcare Policy",
+                  "Market Dynamics",
+                  "Global Trade",
+                ],
+              },
             ].map((track, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 hover:bg-white hover:shadow-lg transition-all duration-300">
-                <h4 className="text-lg font-bold text-gray-900 mb-4">{track.title}</h4>
+              <div
+                key={index}
+                className="bg-gray-50 rounded-xl p-6 hover:bg-white hover:shadow-lg transition-all duration-300"
+              >
+                <h4 className="text-lg font-bold text-gray-900 mb-4">
+                  {track.title}
+                </h4>
                 <ul className="space-y-2">
                   {track.topics.map((topic, topicIndex) => (
-                    <li key={topicIndex} className="text-gray-600 text-sm flex items-center">
+                    <li
+                      key={topicIndex}
+                      className="text-gray-600 text-sm flex items-center"
+                    >
                       <div className="w-2 h-2 bg-pharmaceutical-500 rounded-full mr-3"></div>
                       {topic}
                     </li>
@@ -140,7 +195,7 @@ const KeyFeatures = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default KeyFeatures
+export default KeyFeatures;

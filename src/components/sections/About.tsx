@@ -1,38 +1,48 @@
-import { Microscope, Users, Globe, Award, TrendingUp, Heart } from 'lucide-react'
+import {
+  Microscope,
+  Users,
+  Globe,
+  Award,
+  TrendingUp,
+  Heart,
+} from "lucide-react";
 
 const About = () => {
   const highlights = [
     {
       icon: Microscope,
-      title: 'Cutting-edge Research',
-      description: 'Latest breakthroughs in pharmaceutical research and drug discovery'
+      title: "Cutting-edge Research",
+      description:
+        "Latest breakthroughs in pharmaceutical research and drug discovery",
     },
     {
       icon: Users,
-      title: 'Global Networking',
-      description: 'Connect with 5000+ professionals from 50+ countries'
+      title: "Global Networking",
+      description: "Connect with 5000+ professionals from 50+ countries",
     },
     {
       icon: Globe,
-      title: 'International Scope',
-      description: 'Insights into global pharmaceutical markets and regulations'
+      title: "International Scope",
+      description:
+        "Insights into global pharmaceutical markets and regulations",
     },
     {
       icon: Award,
-      title: 'Excellence Awards',
-      description: 'Recognizing outstanding contributions to pharmaceutical sciences'
+      title: "Excellence Awards",
+      description:
+        "Recognizing outstanding contributions to pharmaceutical sciences",
     },
     {
       icon: TrendingUp,
-      title: 'Market Insights',
-      description: 'Understanding emerging trends and future opportunities'
+      title: "Market Insights",
+      description: "Understanding emerging trends and future opportunities",
     },
     {
       icon: Heart,
-      title: 'Patient Focus',
-      description: 'Emphasizing patient-centric approaches in healthcare'
-    }
-  ]
+      title: "Patient Focus",
+      description: "Emphasizing patient-centric approaches in healthcare",
+    },
+  ];
 
   return (
     <section id="about" className="py-20 bg-gray-50">
@@ -41,10 +51,15 @@ const About = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             About the
-            <span className="block text-pharmaceutical-600">74th Indian Pharmaceutical Congress</span>
+            <span className="block text-pharmaceutical-600">
+              74th Indian Pharmaceutical Congress
+            </span>
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Since its inception, the Indian Pharmaceutical Congress has been the premier platform for advancing pharmaceutical sciences, fostering innovation, and shaping the future of healthcare in India and beyond.
+            Since its inception, the Indian Pharmaceutical Congress has been the
+            premier platform for advancing pharmaceutical sciences, fostering
+            innovation, and shaping the future of healthcare in India and
+            beyond.
           </p>
         </div>
 
@@ -56,19 +71,30 @@ const About = () => {
             </h3>
             <div className="space-y-4 text-gray-600">
               <p className="text-lg leading-relaxed">
-                For over seven decades, the Indian Pharmaceutical Congress has been at the forefront of pharmaceutical advancement in India. The 74th edition continues this tradition of excellence, bringing together the brightest minds in pharmaceutical research, industry leadership, and healthcare innovation.
+                For over seven decades, the Indian Pharmaceutical Congress has
+                been at the forefront of pharmaceutical advancement in India.
+                The 74th edition continues this tradition of excellence,
+                bringing together the brightest minds in pharmaceutical
+                research, industry leadership, and healthcare innovation.
               </p>
               <p className="text-lg leading-relaxed">
-                This year's theme, <strong className="text-pharmaceutical-600">"Innovating Healthcare for Tomorrow,"</strong> reflects our commitment to addressing contemporary challenges in healthcare while paving the way for future breakthroughs.
+                This year's theme,{" "}
+                <strong className="text-pharmaceutical-600">
+                  "Innovating Healthcare for Tomorrow,"
+                </strong>{" "}
+                reflects our commitment to addressing contemporary challenges in
+                healthcare while paving the way for future breakthroughs.
               </p>
               <p className="text-lg leading-relaxed">
-                Join us as we explore cutting-edge research, discuss regulatory developments, and foster collaborations that will shape the pharmaceutical landscape for generations to come.
+                Join us as we explore cutting-edge research, discuss regulatory
+                developments, and foster collaborations that will shape the
+                pharmaceutical landscape for generations to come.
               </p>
             </div>
           </div>
-          
+
           <div className="relative">
-            <div className="bg-gradient-to-br from-pharmaceutical-500 to-primary-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-pharmaceutical-500 to-secondary-600 rounded-2xl p-8 text-white">
               <h4 className="text-2xl font-bold mb-6">Conference Highlights</h4>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
@@ -116,7 +142,9 @@ const About = () => {
               <div className="w-12 h-12 bg-pharmaceutical-100 rounded-lg flex items-center justify-center mb-4">
                 <item.icon className="w-6 h-6 text-pharmaceutical-600" />
               </div>
-              <h4 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h4>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                {item.title}
+              </h4>
               <p className="text-gray-600">{item.description}</p>
             </div>
           ))}
@@ -129,7 +157,8 @@ const About = () => {
               Ready to be Part of This Historic Event?
             </h3>
             <p className="text-gray-600 mb-6">
-              Secure your spot at the 74th IPC and join the conversation that's shaping the future of healthcare.
+              Secure your spot at the 74th IPC and join the conversation that's
+              shaping the future of healthcare.
             </p>
             <a
               href="#registration"
@@ -141,7 +170,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
