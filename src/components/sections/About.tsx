@@ -56,10 +56,10 @@ const About = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Since its inception, the Indian Pharmaceutical Congress has been the
-            premier platform for advancing pharmaceutical sciences, fostering
-            innovation, and shaping the future of healthcare in India and
-            beyond.
+            Join us for the 74th edition focusing on "AI & Technology in Pharma:
+            Educate, Innovate, Empower" - exploring how artificial intelligence
+            and cutting-edge technology are revolutionizing pharmaceutical
+            sciences and healthcare delivery.
           </p>
         </div>
 
@@ -80,10 +80,11 @@ const About = () => {
               <p className="text-lg leading-relaxed">
                 This year's theme,{" "}
                 <strong className="text-pharmaceutical-600">
-                  "Innovating Healthcare for Tomorrow,"
+                  "AI & Technology in Pharma: Educate, Innovate, Empower,"
                 </strong>{" "}
-                reflects our commitment to addressing contemporary challenges in
-                healthcare while paving the way for future breakthroughs.
+                reflects our commitment to exploring how artificial intelligence
+                and emerging technologies are transforming pharmaceutical
+                research, development, and patient care.
               </p>
               <p className="text-lg leading-relaxed">
                 Join us as we explore cutting-edge research, discuss regulatory
@@ -94,7 +95,7 @@ const About = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-pharmaceutical-500 to-secondary-600 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-pharmaceutical-500 to-primary-600 rounded-2xl p-8 text-white">
               <h4 className="text-2xl font-bold mb-6">Conference Highlights</h4>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">

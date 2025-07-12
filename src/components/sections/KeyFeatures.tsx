@@ -21,7 +21,7 @@ const KeyFeatures = () => {
       title: "Excellence Recognition",
       description:
         "Celebrate outstanding achievements in pharmaceutical sciences",
-      color: "from-secondary-400 to-secondary-600",
+      color: "from-primary-400 to-pharmaceutical-600",
     },
     {
       icon: Wifi,
@@ -34,14 +34,14 @@ const KeyFeatures = () => {
       icon: Coffee,
       title: "Premium Hospitality",
       description: "World-class catering and comfortable networking spaces",
-      color: "from-pharmaceutical-400 to-secondary-500",
+      color: "from-pharmaceutical-400 to-primary-500",
     },
     {
       icon: Car,
       title: "Easy Access",
       description:
         "Convenient location with excellent transportation connectivity",
-      color: "from-secondary-400 to-primary-600",
+      color: "from-primary-400 to-pharmaceutical-600",
     },
   ];
 

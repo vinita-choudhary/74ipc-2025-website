@@ -12,7 +12,7 @@ const Hero = () => {
       {/* Background */}
       <div className="absolute inset-0 gradient-bg">
         <div className="absolute inset-0 conference-pattern opacity-30"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary-900/20 to-primary-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-pharmaceutical-900/20 to-primary-900/20"></div>
       </div>
 
       {/* Content */}
@@ -21,25 +21,28 @@ const Hero = () => {
           {/* Conference Badge */}
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3">
             <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-              <span className="text-secondary-600 font-bold text-sm">74</span>
+              <span className="text-pharmaceutical-600 font-bold text-sm">
+                74
+              </span>
             </div>
             <span className="text-sm font-medium">
-              Indian Pharmaceutical Congress 2025
+              74th Indian Pharmaceutical Congress 2025
             </span>
           </div>
 
           {/* Main Title */}
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Innovating
-              <span className="block bg-gradient-to-r from-pharmaceutical-300 to-pharmaceutical-500 bg-clip-text text-transparent">
-                Healthcare
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              <span className="block text-white">AI & TECHNOLOGY</span>
+              <span className="block text-white">IN PHARMA:</span>
+              <span className="block bg-gradient-to-r from-pharmaceutical-300 to-primary-300 bg-clip-text text-transparent">
+                EDUCATE, INNOVATE, EMPOWER
               </span>
-              for Tomorrow
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               Join 5000+ pharmaceutical professionals, researchers, and industry
-              leaders at India's most prestigious pharmaceutical congress.
+              leaders at India's most prestigious pharmaceutical congress
+              exploring the future of AI and technology in healthcare.
             </p>
           </div>
 
@@ -47,11 +50,13 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-lg">
             <div className="flex items-center space-x-2">
               <Calendar className="w-6 h-6 text-pharmaceutical-300" />
-              <span className="font-medium">February 15-17, 2025</span>
+              <span className="font-medium">December 19-21, 2025</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="w-6 h-6 text-pharmaceutical-300" />
-              <span className="font-medium">New Delhi, India</span>
+              <span className="font-medium">
+                Bangalore International Exhibition Centre
+              </span>
             </div>
             <div className="flex items-center space-x-2">
               <Users className="w-6 h-6 text-pharmaceutical-300" />
@@ -63,12 +68,12 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
             <Link
               href="#registration"
-              className="group bg-white text-secondary-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
+              className="group bg-white text-pharmaceutical-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-pharmaceutical-50 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
             >
               <span>Register Now</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <button className="group bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-secondary-600 transition-all duration-300 flex items-center space-x-2">
+            <button className="group bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-pharmaceutical-600 transition-all duration-300 flex items-center space-x-2">
               <Play className="w-5 h-5" />
               <span>Watch Promo</span>
             </button>

@@ -261,7 +261,7 @@ const Schedule = () => {
       keynote:
         "bg-pharmaceutical-100 text-pharmaceutical-800 border-pharmaceutical-200",
       panel: "bg-primary-100 text-primary-800 border-primary-200",
-      session: "bg-secondary-100 text-secondary-800 border-secondary-200",
+      session: "bg-primary-100 text-primary-800 border-primary-200",
       workshop:
         "bg-pharmaceutical-100 text-pharmaceutical-800 border-pharmaceutical-200",
       break: "bg-gray-100 text-gray-800 border-gray-200",

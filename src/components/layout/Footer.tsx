@@ -11,13 +11,13 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary-900 text-white">
+    <footer className="bg-primary-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {/* About Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-pharmaceutical-500 to-secondary-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-pharmaceutical-500 to-primary-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">74</span>
               </div>
               <div>

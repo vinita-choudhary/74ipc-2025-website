@@ -36,7 +36,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-pharmaceutical-500 to-secondary-600 rounded-lg flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-pharmaceutical-500 to-primary-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">74</span>
             </div>
             <div className="hidden md:block">
@@ -81,7 +81,7 @@ const Header = () => {
             >
               <div className="flex items-center space-x-1">
                 <Calendar className="w-4 h-4" />
-                <span>Feb 15-17, 2025</span>
+                <span>Dec 19-21, 2025</span>
               </div>
             </div>
             <Link

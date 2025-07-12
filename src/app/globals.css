@@ -10,23 +10,23 @@
 
 @layer components {
   .gradient-bg {
-    background: linear-gradient(135deg, #061b48 0%, #17840e 50%, #e1681f 100%);
+    background: linear-gradient(135deg, #e1681f 0%, #17840e 50%, #e1681f 100%);
   }
 
   .conference-pattern {
     background-image: radial-gradient(
         circle at 20% 80%,
-        rgba(225, 104, 31, 0.3) 0%,
+        rgba(225, 104, 31, 0.4) 0%,
         transparent 50%
       ),
       radial-gradient(
         circle at 80% 20%,
-        rgba(23, 132, 14, 0.3) 0%,
+        rgba(23, 132, 14, 0.4) 0%,
         transparent 50%
       ),
       radial-gradient(
         circle at 40% 40%,
-        rgba(6, 27, 72, 0.3) 0%,
+        rgba(225, 104, 31, 0.2) 0%,
         transparent 50%
       );
   }

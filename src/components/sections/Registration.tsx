@@ -62,7 +62,7 @@ const Registration = () => {
         "Industry leadership roundtables",
         "Executive dinner invitation",
       ],
-      color: "from-secondary-400 to-secondary-600",
+      color: "from-primary-400 to-primary-600",
       popular: false,
     },
   ];
