@@ -1,12 +1,12 @@
 import { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import OrganizationInfo from "@/components/sections/OrganizationInfo";
+import PresidentAppeal from "@/components/sections/PresidentAppeal";
+import FederatingAssociations from "@/components/sections/FederatingAssociations";
 import KeyFeatures from "@/components/sections/KeyFeatures";
 import Speakers from "@/components/sections/Speakers";
-import Schedule from "@/components/sections/Schedule";
-import Registration from "@/components/sections/Registration";
 import Sponsors from "@/components/sections/Sponsors";
-import Contact from "@/components/sections/Contact";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -19,12 +19,12 @@ export default function HomePage() {
     <div className="min-h-screen">
       <Hero />
       <About />
+      <OrganizationInfo />
+      <PresidentAppeal />
       <KeyFeatures />
+      <FederatingAssociations />
       <Speakers />
-      <Schedule />
-      <Registration />
       <Sponsors />
-      <Contact />
     </div>
   );
 }

@@ -40,21 +40,21 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {[
-                { name: "About IPCA", href: "#about-ipca" },
-                { name: "About APTI", href: "#about-apti" },
-                { name: "Speakers", href: "#speakers" },
-                { name: "Schedule", href: "#schedule" },
-                { name: "Registration", href: "#registration" },
-                { name: "Venue", href: "#venue" },
-                { name: "Accommodation", href: "#accommodation" },
+                { name: "About IPCA", href: "/about-ipca" },
+                { name: "President's Message", href: "/president-message" },
+                { name: "Speakers", href: "/speakers" },
+                { name: "Schedule", href: "/schedule" },
+                { name: "Registration", href: "/registration" },
+                { name: "Scientific", href: "/scientific" },
+                { name: "Contact", href: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-gray-300 hover:text-pharmaceutical-400 transition-colors text-sm"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -186,15 +186,15 @@ const Footer = () => {
               <p className="text-gray-400 text-sm">
                 © 2025 74th Indian Pharmaceutical Congress. All rights reserved.
               </p>
-              <div className="flex space-x-4 mt-2 text-xs text-gray-500">
+              <div className="flex flex-wrap gap-x-4 gap-y-2 mt-2 text-xs text-gray-500">
                 <Link
-                  href="/privacy"
+                  href="/privacy-policy"
                   className="hover:text-pharmaceutical-400 transition-colors"
                 >
                   Privacy Policy
                 </Link>
                 <Link
-                  href="/terms"
+                  href="/terms-of-service"
                   className="hover:text-pharmaceutical-400 transition-colors"
                 >
                   Terms of Service
@@ -205,8 +205,14 @@ const Footer = () => {
                 >
                   Disclaimer
                 </Link>
+                {/* <Link
+                  href="/refund-cancellation"
+                  className="hover:text-pharmaceutical-400 transition-colors"
+                >
+                  Refund & Cancellation
+                </Link> */}
                 <Link
-                  href="/refund"
+                  href="/no-refund-policy"
                   className="hover:text-pharmaceutical-400 transition-colors"
                 >
                   Refund & Cancellation

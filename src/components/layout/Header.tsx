@@ -24,6 +24,7 @@ const Header = () => {
       href: "/about-ipca",
       submenu: [
         { name: "About IPCA", href: "/about-ipca" },
+        { name: "President's Message", href: "/president-message" },
         { name: "About Theme", href: "/about-theme" },
         { name: "Key Focus Areas", href: "/key-focus-areas" },
         { name: "Expected Outcomes", href: "/expected-outcomes" },
