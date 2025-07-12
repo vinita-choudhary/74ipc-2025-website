@@ -8,6 +8,12 @@ import {
   Clock,
   Calendar,
   ChevronRight,
+  AlertTriangle,
+  CheckCircle,
+  Mail,
+  Phone,
+  Globe,
+  X,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -179,6 +185,75 @@ const abstractGuidelines = [
   },
 ];
 
+const specializationAreas = [
+  "Pharmaceutical Technology",
+  "Medicinal Chemistry",
+  "Pharmacognosy, Indigenous Drugs, Herbal formulations and Phytochemistry",
+  "Pharmacology and Toxicology, Clinical Research & Pharmacovigilance",
+  "Pharmaceutical Analysis and Quality Assurance",
+  "Biopharmaceutics, Pharmacokinetics & Drug Metabolism",
+  "Biotechnology and Biotherapeutics",
+  "Hospital, Community and Clinical Pharmacy",
+  "Pharmaceutical Education and Professional Pharmacy",
+  "Drug Regulatory Affairs & Pharmaceutical Management",
+  "Pharmacoeconomics and Pharmacoepidemiology",
+  "Artificial Intelligence / Bioinformatics / Data Analytics",
+];
+
+const abstractDates = [
+  {
+    date: "23rd June 2025",
+    event: "Call for Abstract Submission",
+    status: "Open",
+  },
+  {
+    date: "31st August 2025",
+    event: "Last Date for Abstract Submission",
+    status: "Deadline",
+  },
+  {
+    date: "15th September 2025",
+    event: "Acceptance of Abstracts for Poster / Oral",
+    status: "Notification",
+  },
+  {
+    date: "30th September 2025",
+    event: "Registration without Late Fee",
+    status: "Registration",
+  },
+];
+
+const rejectionCriteria = [
+  "Review articles",
+  "Papers without methodology and results",
+  "Papers describing simple laboratory experiments",
+  "Papers describing Patho-physiology of a disease",
+  "Papers describing treatment in a single patient",
+];
+
+const sscContacts = [
+  {
+    name: "Prof. Vandana B. Patravale",
+    role: "Convener SSC, IPCA",
+    email: "ssc74ipc@gmail.com",
+    phone: "9820029314",
+  },
+  {
+    name: "Dr. G. Sumalatha",
+    role: "Member, SSC- IPCA",
+    email: "ssc74ipc@gmail.com",
+    phone: "9885098047",
+  },
+];
+
+const membershipRequirements = [
+  "Indian Pharmaceutical Association (IPA)",
+  "Indian Hospital Pharmacists Association (IHPA)",
+  "Association of Pharmaceutical Teachers of India (APTI)",
+  "Indian Pharmaceutical Graduates Association (IPGA)",
+  "All India Drug Control Officers Confederation (AIDCOC)",
+];
+
 export default function ScientificPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pharmaceutical-50 to-primary-50">
@@ -312,65 +387,284 @@ export default function ScientificPage() {
         </div>
       </section>
 
-      {/* Abstract Submission */}
+      {/* Call for Presentation of Scientific Paper */}
       <section className="py-20 bg-gradient-to-r from-pharmaceutical-50 to-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
-              Abstract Submission Guidelines
+              Call for Presentation of Scientific Paper
             </h2>
             <p className="text-lg text-secondary-600 mb-8">
-              Share your research with the global pharmaceutical community
+              The IPCA Scientific Services Committee (SSC) invites delegates to
+              submit findings of their original scientific work
             </p>
-            <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full">
-              <Clock className="h-4 w-4" />
-              <span className="font-semibold">Deadline: October 15, 2025</span>
+          </div>
+
+          {/* Main Introduction */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-pharmaceutical-100">
+            <div className="text-center mb-8">
+              <Globe className="h-16 w-16 text-pharmaceutical-600 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-secondary-900 mb-4">
+                Online Submission Process
+              </h3>
+              <p className="text-secondary-700 mb-6">
+                The process of paper submission and correspondence regarding
+                acceptance of papers is through online only.
+              </p>
+              <div className="inline-flex items-center gap-2 bg-pharmaceutical-100 text-pharmaceutical-800 px-6 py-3 rounded-full font-semibold">
+                <Globe className="h-5 w-5" />
+                <span>Visit: www.scientificipca.org</span>
+              </div>
+            </div>
+
+            <div className="prose max-w-none text-secondary-700">
+              <p className="mb-6">
+                The IPCA Scientific Services Committee (SSC) has great pleasure
+                in inviting the delegates to submit the findings of their
+                original scientific work as abstracts for presentation during
+                the Congress as <strong>Poster and/or Oral presentation</strong>
+                . The SSC will screen the abstract submitted and will select the
+                abstract for Poster presentation. The SSC of 74th IPC will
+                select best papers amongst the papers accepted for Oral
+                presentation.
+              </p>
+              <p className="mb-6">
+                The best Poster and/or Best Oral presentation from selected
+                category will be announced by the SSC during the valedictory
+                function of IPC. The best Poster and/Best Oral presentation will
+                be rewarded with certificate, memento and cash prize of{" "}
+                <strong>Rs. 2000/- (For Best Poster)</strong> and{" "}
+                <strong>Rs. 5000/- (For Best Oral)</strong>.
+              </p>
             </div>
           </div>
 
+          {/* Specialization Areas */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-secondary-900 text-center mb-8">
+              12 Areas of Specialization
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {specializationAreas.map((area, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-4 shadow-md border border-pharmaceutical-100 hover:shadow-lg transition-shadow"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-pharmaceutical-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">
+                      {index + 1}
+                    </div>
+                    <p className="text-secondary-700 text-sm font-medium">
+                      {area}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Abstract Content Guidelines */}
+          <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border border-pharmaceutical-100">
+            <h3 className="text-2xl font-bold text-secondary-900 mb-6 text-center">
+              Abstract Content Guidelines
+            </h3>
+            <div className="prose max-w-none text-secondary-700">
+              <p className="mb-6">
+                The abstract of the work proposed to be presented should be
+                prepared and properly pasted in the space provided in SSC
+                website as per the instructions given and should be submitted in
+                the prescribed format and online only on or before{" "}
+                <strong>31st August 2025</strong>. The Model Abstract is
+                available in SSC website -
+                <strong> www.scientificipca.org</strong>
+              </p>
+            </div>
+          </div>
+
+          {/* Important Dates Timeline */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-secondary-900 text-center mb-8">
+              Important Dates
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {abstractDates.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-lg p-6 border border-pharmaceutical-100 text-center"
+                >
+                  <Calendar className="h-12 w-12 text-pharmaceutical-600 mx-auto mb-4" />
+                  <h4 className="font-bold text-secondary-900 mb-2">
+                    {item.event}
+                  </h4>
+                  <p className="text-pharmaceutical-600 font-semibold text-lg mb-2">
+                    {item.date}
+                  </p>
+                  <span
+                    className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
+                      item.status === "Deadline"
+                        ? "bg-red-100 text-red-800"
+                        : item.status === "Open"
+                        ? "bg-green-100 text-green-800"
+                        : "bg-blue-100 text-blue-800"
+                    }`}
+                  >
+                    {item.status}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Submission Guidelines and Requirements */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            {/* Important Notes */}
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-pharmaceutical-100">
+              <h4 className="text-xl font-bold text-secondary-900 mb-6 flex items-center gap-3">
+                <AlertTriangle className="h-6 w-6 text-yellow-600" />
+                Important Notes
+              </h4>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-secondary-700 text-sm">
+                    The presenting author must be a member of any of the
+                    federating associations of IPCA
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-secondary-700 text-sm">
+                    Abstracts must be submitted online only through
+                    www.scientificipca.org
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-secondary-700 text-sm">
+                    Only registered delegates will be allowed to present the
+                    abstracts during IPC
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-secondary-700 text-sm">
+                    All queries should be done through e-mail: ssc@74ipc.com
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Membership Requirements */}
+            <div className="bg-white rounded-xl shadow-lg p-8 border border-pharmaceutical-100">
+              <h4 className="text-xl font-bold text-secondary-900 mb-6">
+                Required Membership (Any of the following)
+              </h4>
+              <ul className="space-y-3">
+                {membershipRequirements.map((org, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-pharmaceutical-600 rounded-full"></div>
+                    <span className="text-secondary-700 text-sm">{org}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Rejection Criteria */}
+          <div className="bg-red-50 border border-red-200 rounded-xl p-8 mb-12">
+            <h4 className="text-xl font-bold text-red-800 mb-6 flex items-center gap-3">
+              <X className="h-6 w-6" />
+              Papers That Will Be Rejected
+            </h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              {rejectionCriteria.map((criterion, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <X className="h-4 w-4 text-red-600 flex-shrink-0" />
+                  <span className="text-red-700 text-sm">{criterion}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact Information */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {abstractGuidelines.map((guideline, index) => (
+            {sscContacts.map((contact, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl shadow-lg p-8 border border-pharmaceutical-100"
               >
-                <h3 className="text-xl font-bold text-secondary-900 mb-4">
-                  {guideline.category}
-                </h3>
-                <p className="text-secondary-600 mb-4">
-                  {guideline.description}
+                <h4 className="text-lg font-bold text-secondary-900 mb-2">
+                  {contact.name}
+                </h4>
+                <p className="text-pharmaceutical-600 font-semibold mb-4">
+                  {contact.role}
                 </p>
-
-                <div className="mb-4">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-pharmaceutical-100 text-pharmaceutical-800">
-                    {guideline.wordLimit}
-                  </span>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-secondary-900 mb-2">
-                    Required Sections:
-                  </h4>
-                  <ul className="space-y-1">
-                    {guideline.sections.map((section, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-center gap-2 text-sm text-secondary-600"
-                      >
-                        <ChevronRight className="h-3 w-3 text-pharmaceutical-600 flex-shrink-0" />
-                        {section}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <Mail className="h-5 w-5 text-pharmaceutical-600" />
+                    <a
+                      href={`mailto:${contact.email}`}
+                      className="text-pharmaceutical-600 hover:text-pharmaceutical-700 font-medium"
+                    >
+                      {contact.email}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Phone className="h-5 w-5 text-pharmaceutical-600" />
+                    <a
+                      href={`tel:+91${contact.phone}`}
+                      className="text-pharmaceutical-600 hover:text-pharmaceutical-700 font-medium"
+                    >
+                      +91 {contact.phone}
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
+          {/* Continuing Education */}
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-8 mb-12">
+            <h4 className="text-xl font-bold text-blue-800 mb-6">
+              Accreditation For Continuing Education
+            </h4>
+            <div className="prose max-w-none text-blue-700">
+              <p className="mb-4">
+                Continuing Education is mandatory for all Pharmacists and
+                faculty for the purposes of continuing their professional
+                responsibilities and registration with State Pharmacy Councils
+                as per various regulations of Pharmacy Council of India, New
+                Delhi.
+              </p>
+              <p className="mb-4">
+                <strong>
+                  "Pharmacy Council of India has accorded recognition to the
+                  Scientific Sessions of the IPC as a refresher
+                  course/continuing pharmacy education programme under
+                  regulations 4.2 (IV) of the Pharmacy Practice Regulations
+                  2015".
+                </strong>
+              </p>
+              <p>
+                Participants who attend the scientific sessions in full are
+                eligible to receive CEP Certificate. The Certificate will be
+                issued at the registration counter between{" "}
+                <strong>1 pm - 3 pm on the last day of IPC</strong>.
+              </p>
+            </div>
+          </div>
+
+          {/* Submit Button */}
           <div className="text-center">
-            <button className="bg-pharmaceutical-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-pharmaceutical-700 transition-colors">
+            <a
+              href="https://www.scientificipca.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-pharmaceutical-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-pharmaceutical-700 transition-colors"
+            >
+              <Globe className="h-6 w-6" />
               Submit Your Abstract
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -395,7 +689,7 @@ export default function ScientificPage() {
                 Best Oral Presentation
               </h3>
               <p className="text-secondary-600 mb-4">
-                ₹50,000 cash prize + certificate
+                ₹5,000 cash prize + certificate + memento
               </p>
               <p className="text-sm text-secondary-500">
                 Awarded for outstanding research presentation
@@ -408,7 +702,7 @@ export default function ScientificPage() {
                 Best Poster Award
               </h3>
               <p className="text-secondary-600 mb-4">
-                ₹25,000 cash prize + certificate
+                ₹2,000 cash prize + certificate + memento
               </p>
               <p className="text-sm text-secondary-500">
                 Recognizing innovative research posters
@@ -443,29 +737,27 @@ export default function ScientificPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <Calendar className="h-12 w-12 text-pharmaceutical-400 mx-auto mb-4" />
-              <h3 className="font-bold text-lg mb-2">
-                Abstract Submission Opens
-              </h3>
-              <p className="text-secondary-300">August 1, 2025</p>
+              <h3 className="font-bold text-lg mb-2">Call for Abstract</h3>
+              <p className="text-secondary-300">June 23, 2025</p>
             </div>
             <div className="text-center">
               <Calendar className="h-12 w-12 text-pharmaceutical-400 mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">
                 Abstract Submission Deadline
               </h3>
-              <p className="text-secondary-300">October 15, 2025</p>
+              <p className="text-secondary-300">August 31, 2025</p>
             </div>
             <div className="text-center">
               <Calendar className="h-12 w-12 text-pharmaceutical-400 mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">
                 Acceptance Notification
               </h3>
-              <p className="text-secondary-300">November 1, 2025</p>
+              <p className="text-secondary-300">September 15, 2025</p>
             </div>
             <div className="text-center">
               <Calendar className="h-12 w-12 text-pharmaceutical-400 mx-auto mb-4" />
-              <h3 className="font-bold text-lg mb-2">Final Program Release</h3>
-              <p className="text-secondary-300">December 1, 2025</p>
+              <h3 className="font-bold text-lg mb-2">Registration Deadline</h3>
+              <p className="text-secondary-300">September 30, 2025</p>
             </div>
           </div>
         </div>
